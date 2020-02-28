@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">OneKeyTest</string>
+    <string name="str_remote_control">遥控器</string>
+    <string name="str_all_connect">一键连接</string>
+    <string name="str_all_disconnect">一键断开</string>
+    <string name="str_item_connect">点击可连接</string>
+    <string name="str_item_disconnect">点击可断开</string>
+    <string name="str_toast_no_search">没有找到可连接的设备</string>
+    <string name="str_btn_searching">正在搜索...</string>
+    <string name="str_btn_search_over">搜索完毕</string>
+    <string name="str_btn_search">搜索设备</string>
+
+
+    <string name="btn_meiti">媒体</string>
+    <string name="btn_jplay">游戏</string>
+    <string name="btn_juse">应用</string>
+    <string name="btn_setting">设置</string>
+    <string name="btn_home">主页</string>
+    <string name="btn_back">返回</string>
+    <string name="btn_app_back">返回连接页面</string>
+</resources>

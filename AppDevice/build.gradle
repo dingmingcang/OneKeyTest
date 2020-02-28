@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    defaultConfig {
+        applicationId "com.example.dingmingcang.onekeytest"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "5d21f89b78436db2d705db66", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default" //暂时填写默认值即可.
+        ]
+
+        ndk {
+            abiFilters "armeabi"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    testCompile 'junit:junit:4.12'
+
+    compile 'cn.jiguang.sdk:jpush:3.0.8'  // 此处以JPush 3.0.3 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.6'  // 此处以JCore 1.1.1 版本为例。
+}
